@@ -7,5 +7,8 @@ export function isRangeAvailable(
   requestedRange: DateRange,
   availableRange: DateRange
 ): boolean {
-  return false;
+  return (
+      requestedRange.startDate >= availableRange.startDate &&
+      requestedRange.endDate <= availableRange.endDate
+  );
 }
